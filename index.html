@@ -6,10 +6,10 @@
   <title>Multimedia Interaktif: Desain Flowchart & Storyboard E-Learning</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts Inter -->
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -55,7 +55,7 @@
     }
     @keyframes pulse-subtle {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.02); }
+      50% { opacity: 0.9; transform: scale(1.015); }
     }
     .animate-pulse-subtle {
       animation: pulse-subtle 3s infinite ease-in-out;
@@ -65,39 +65,39 @@
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-800">
 
   <!-- Top Navigation Header -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-md shadow-indigo-200 font-bold text-xl">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-violet-600 flex items-center justify-center text-white shadow-md shadow-indigo-200 font-bold text-xl">
             M
           </div>
           <div>
-            <h1 class="text-base font-bold text-slate-900 leading-tight">EduInteractive</h1>
-            <p class="text-xs text-slate-500 font-medium">Kuliah Multimedia Interaktif</p>
+            <h1 class="text-base font-extrabold text-slate-900 leading-tight">EduInteractive</h1>
+            <p class="text-xs text-slate-500 font-medium">Perancangan Multimedia Interaktif & E-Learning</p>
           </div>
         </div>
 
         <!-- Navigation Tabs -->
-        <nav class="hidden md:flex space-x-1 p-1 bg-slate-100 rounded-xl border border-slate-200">
-          <button onclick="switchTab('teori-flowchart')" class="nav-btn active px-4 py-1.5 text-xs font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="teori-flowchart">
-            1. Desain Flowchart
+        <nav class="hidden md:flex space-x-1 p-1 bg-slate-100 rounded-xl border border-slate-200 text-xs">
+          <button onclick="switchTab('teori-flowchart')" class="nav-btn active px-3.5 py-1.5 font-bold rounded-lg transition-all text-indigo-700 bg-white shadow-xs" data-tab="teori-flowchart">
+            1. Desain Navigasi Flowchart
           </button>
-          <button onclick="switchTab('teori-storyboard')" class="nav-btn px-4 py-1.5 text-xs font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="teori-storyboard">
+          <button onclick="switchTab('teori-storyboard')" class="nav-btn px-3.5 py-1.5 font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="teori-storyboard">
             2. Storyboard E-Learning
           </button>
-          <button onclick="switchTab('studio-storyboard')" class="nav-btn px-4 py-1.5 text-xs font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="studio-storyboard">
+          <button onclick="switchTab('studio-storyboard')" class="nav-btn px-3.5 py-1.5 font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="studio-storyboard">
             3. Studio & Simulator
           </button>
-          <button onclick="switchTab('kuis-evaluasi')" class="nav-btn px-4 py-1.5 text-xs font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="kuis-evaluasi">
-            4. Kuis Pemahaman
+          <button onclick="switchTab('kuis-evaluasi')" class="nav-btn px-3.5 py-1.5 font-semibold rounded-lg transition-all text-slate-700 hover:text-indigo-600" data-tab="kuis-evaluasi">
+            4. Kuis Evaluasi Teori
           </button>
         </nav>
 
         <div class="flex items-center space-x-2">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
-            <span class="w-1.5 h-1.5 mr-1.5 bg-emerald-500 rounded-full animate-ping"></span>
-            Kelas Aktif
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span class="w-2 h-2 mr-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+            Modul Perkuliahan
           </span>
         </div>
       </div>
@@ -107,136 +107,288 @@
   <!-- Main Container -->
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
     
-    <!-- Hero / Orientation Card -->
+    <!-- Hero / Course Orientation Card -->
     <div class="mb-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl relative overflow-hidden">
       <div class="absolute right-0 top-0 translate-x-12 -translate-y-8 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="relative z-10 max-w-3xl">
         <span class="inline-block px-3 py-1 rounded-md text-xs font-bold tracking-wider uppercase bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 mb-3">
-          Pedoman Instructional Design & Authoring
+          Pedoman Instructional Design & Authoring Multimedia
         </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
-          Merancang Arsitektur & Cetak Biru E-Learning Interaktif
+        <h2 class="text-2xl sm:text-3xl font-black tracking-tight mb-2">
+          Arsitektur Logika & Cetak Biru E-Learning Interaktif
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-          Membuat produk multimedia interaktif tanpa perencanaan sama dengan coding tanpa algoritma. Kuasai pembuatan <strong>Flowchart (Peta Navigasi Logika)</strong> dan <strong>Storyboard E-Learning (Cetak Biru Pemrograman & UI)</strong> sebelum masuk ke tahap authoring tool atau web development.
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Menguasai dua pilar utama perancangan multimedia pembelajaran: <strong>Flowchart Navigasi</strong> (arsitektur pengalaman makro & peta alur keputusan pembelajar) dan <strong>Storyboard E-Learning</strong> (spesifikasi mikro interaktivitas antarmuka, beban kognitif, audio, serta umpan balik edukatif).
         </p>
-        <div class="flex flex-wrap gap-3">
-          <button onclick="switchTab('studio-storyboard')" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs sm:text-sm font-semibold shadow-md transition-all flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-            Buka Studio Storyboard E-Learning
-          </button>
-          <button onclick="switchTab('teori-flowchart')" class="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs sm:text-sm font-medium transition-all">
-            Pelajari Flowchart
-          </button>
-        </div>
       </div>
     </div>
 
-    <!-- TAB 1: FLOWCHART MULTIMEDIA -->
+    <!-- ========================================== -->
+    <!-- TAB 1: TEORI & DESAIN FLOWCHART NAVIGASI -->
+    <!-- ========================================== -->
     <div id="tab-teori-flowchart" class="tab-content space-y-8">
-      <!-- Pengantar Flowchart -->
+      
+      <!-- Academic Definitions & Foundational Theories Card -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Kolom Definisi Formal -->
         <div class="lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold text-xl">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
           </div>
-          <h3 class="text-lg font-bold text-slate-900">Apa itu Flowchart Navigasi?</h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
-            Dalam multimedia interaktif, flowchart bukanlah bagan rumus rumit programmer backend, melainkan <strong>peta jalur pengalaman pengguna</strong> (*User Journey Map*).
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 block">Definisi Akademik</span>
+            <h3 class="text-base font-extrabold text-slate-900 mt-0.5">Apa itu Flowchart Navigasi?</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify">
+            Menurut <strong>Vaughan (2014)</strong> dan <strong>Alessi & Trollip (2001)</strong>, flowchart navigasi (*navigation flowchart*) adalah representasi grafis sistematis yang memetakan seluruh jalur pergerakan pengguna, keterhubungan layar (*hyper-connectivity*), dan kondisi percabangan (*decision point*) dalam suatu produk multimedia interaktif.
           </p>
-          <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 leading-relaxed">
-            <strong>Aturan Emas:</strong> Setiap kotak persegi (Screen) di dalam flowchart wajib memiliki <strong>1 lembar Storyboard</strong> tersendiri dengan ID Slide yang serasi.
+          <div class="p-3.5 bg-indigo-50/70 border border-indigo-200/70 rounded-xl text-xs text-indigo-950 space-y-1.5">
+            <div class="font-bold flex items-center gap-1.5 text-indigo-800">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+              <span>Bukan Flowchart Algoritma Coding</span>
+            </div>
+            <p class="text-[11px] text-slate-700 leading-relaxed">
+              Flowchart multimedia tidak berfokus pada kalkulasi CPU/basis data, melainkan memetakan <strong>User Journey & Wayfinding</strong>: ke mana pengguna melangkah, tombol apa yang ditekan, serta bagaimana alur kembali (*return loop*).
+            </p>
           </div>
         </div>
 
-        <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
-            <span>Simbol Inti Flowchart Multimedia</span>
-            <span class="text-xs font-normal text-slate-500">(Standar ANSI yang Digunakan)</span>
-          </h3>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <!-- Terminator -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition">
-              <div class="w-16 h-8 mx-auto mb-2 rounded-full border-2 border-indigo-600 bg-indigo-50 flex items-center justify-center text-[10px] font-bold text-indigo-700">
-                START / EXIT
-              </div>
-              <h4 class="text-xs font-bold text-slate-800">Terminator</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Awal aplikasi diload atau tombol Keluar/Exit.</p>
+        <!-- Kolom Landasan Teori Ilmiah -->
+        <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 block">Landasan Teori Ilmiah</span>
+              <h3 class="text-base font-extrabold text-slate-900">Teori Kognitif & Navigasi Antarmuka Pengguna</h3>
             </div>
-            <!-- Process / Screen -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition">
-              <div class="w-16 h-8 mx-auto mb-2 rounded border-2 border-emerald-600 bg-emerald-50 flex items-center justify-center text-[10px] font-bold text-emerald-700">
-                Screen / Slide
-              </div>
-              <h4 class="text-xs font-bold text-slate-800">Proses (Scene)</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Mewakili 1 slide tampilan/layar materi.</p>
+            <span class="px-2.5 py-1 rounded text-[10px] font-mono font-bold bg-slate-100 text-slate-600">HCI & Instructional Design</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+            <!-- Teori 1: Cognitive Load Theory -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center mb-2">1</div>
+              <h4 class="text-xs font-bold text-slate-900">Cognitive Load Theory (Sweller, 1988)</h4>
+              <p class="text-[11px] text-slate-600 mt-1.5 leading-relaxed">
+                Struktur navigasi yang semrawut memicu <em>extraneous cognitive load</em> (beban kognitif sia-sia). Pembelajar akan tersesat (*lost in hyperspace*) dan kehabisan memori kerja sebelum memahami materi inti.
+              </p>
             </div>
-            <!-- Decision -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition">
-              <div class="w-8 h-8 mx-auto mb-2 rotate-45 border-2 border-amber-600 bg-amber-50 flex items-center justify-center">
-                <span class="-rotate-45 text-[9px] font-bold text-amber-700">?</span>
-              </div>
-              <h4 class="text-xs font-bold text-slate-800">Decision (Cabang)</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Titik interaksi user (Kuis benar/salah, pilihan).</p>
+
+            <!-- Teori 2: Wayfinding & Information Architecture -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center justify-center mb-2">2</div>
+              <h4 class="text-xs font-bold text-slate-900">Spatial Wayfinding & Information Architecture</h4>
+              <p class="text-[11px] text-slate-600 mt-1.5 leading-relaxed">
+                Menurut <strong>Rosenfeld & Morville (2002)</strong>, navigasi harus menjawab 3 pertanyaan dasar pengguna setiap saat: <em>"Di mana saya sekarang?"</em>, <em>"Ke mana saya bisa pergi?"</em>, dan <em>"Bagaimana cara kembali?"</em>.
+              </p>
             </div>
-            <!-- Flowline -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition">
-              <div class="w-16 h-8 mx-auto mb-2 flex items-center justify-center text-slate-700">
-                <span class="text-lg">➔</span>
-              </div>
-              <h4 class="text-xs font-bold text-slate-800">Garis Alir</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Arah tombol klik atau lompatan otomatis.</p>
+
+            <!-- Teori 3: Locus of Control -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition">
+              <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center mb-2">3</div>
+              <h4 class="text-xs font-bold text-slate-900">User Control & Self-Pacing (Andragogi)</h4>
+              <p class="text-[11px] text-slate-600 mt-1.5 leading-relaxed">
+                Prinsip <strong>Ben Shneiderman (Eight Golden Rules)</strong>: memberikan <em>Internal Locus of Control</em>. Pembelajar harus merasa memegang kendali atas tempo belajar mereka tanpa merasa dipaksa secara buta.
+              </p>
+            </div>
+          </div>
+
+          <!-- Aturan Emas ANSI -->
+          <div class="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl flex items-start gap-3">
+            <span class="text-lg">⚖️</span>
+            <div class="text-xs text-amber-900 leading-relaxed">
+              <strong>Aturan Standar ANSI/ISO 5807 pada Multimedia Interaktif:</strong> Setiap titik interaksi yang memberikan opsi pilihan menu atau evaluasi kuis <strong>WAJIB menggunakan simbol Decision (Belah Ketupat)</strong>, bukan persegi proses biasa. Semua cabang pilihan harus memiliki rute kembali (*Return Loop Bus*) agar aplikasi tidak berhenti mendadak (*dead end*).
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 4 Struktur Arsitektur Navigasi Interaktif -->
-      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-100 gap-4">
+      <!-- Simbol Inti Flowchart ANSI/ISO 5807 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-2">
+            <h3 class="text-sm sm:text-base font-extrabold text-slate-900">Simbol Inti Flowchart Multimedia Interaktif</h3>
+            <span class="text-xs font-semibold text-slate-500">(Standar ANSI X3.5 & ISO 5807)</span>
+          </div>
+          <span class="text-xs text-indigo-600 font-semibold hidden sm:inline">Pahami bentuk & fungsinya</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <!-- Terminator -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition group">
+            <div class="w-20 h-9 mx-auto mb-2 rounded-full border-2 border-indigo-600 bg-indigo-50/80 flex items-center justify-center text-[11px] font-bold text-indigo-700 shadow-xs">
+              START / EXIT
+            </div>
+            <h4 class="text-xs font-bold text-slate-900">Terminator (Stadium)</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Menandai pembukaan aplikasi pertama kali atau penutupan aplikasi (*Exit/Quit*).</p>
+          </div>
+
+          <!-- Screen / Slide (Process) -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition group">
+            <div class="w-20 h-9 mx-auto mb-2 rounded-sm border-2 border-emerald-600 bg-emerald-50/80 flex items-center justify-center text-[10px] font-bold text-emerald-700 shadow-xs">
+              Slide / Scene
+            </div>
+            <h4 class="text-xs font-bold text-slate-900">Screen (Persegi Panjang)</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Mewakili 1 unit tampilan layar / slide antarmuka yang diproyeksikan ke pengguna.</p>
+          </div>
+
+          <!-- Decision (Diamond) -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition group">
+            <div class="w-8 h-8 mx-auto mb-2.5 rotate-45 border-2 border-amber-600 bg-amber-50/80 flex items-center justify-center shadow-xs">
+              <span class="-rotate-45 text-[10px] font-bold text-amber-700">?</span>
+            </div>
+            <h4 class="text-xs font-bold text-slate-900">Decision (Belah Ketupat)</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Titik percabangan logika interaksi: pilihan menu, klik tombol, atau validasi skor kuis.</p>
+          </div>
+
+          <!-- Flowline & Return Loop -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center hover:border-indigo-300 transition group">
+            <div class="w-20 h-9 mx-auto mb-2 flex items-center justify-center text-indigo-600 font-mono text-xl">
+              ───➔
+            </div>
+            <h4 class="text-xs font-bold text-slate-900">Flowline & Return Loop</h4>
+            <p class="text-[11px] text-slate-500 mt-1 leading-snug">Arah panah alur perpindahan tombol (*forward*) serta garis kembali (*return bus*).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Struktur Arsitektur Navigasi Multimedia Sesuai Standar ANSI -->
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-4">
           <div>
-            <h3 class="text-lg font-bold text-slate-900">4 Model Struktur Navigasi Multimedia</h3>
-            <p class="text-xs text-slate-500">Klik model di bawah untuk menguji simulasi alur navigasinya secara langsung</p>
+            <div class="flex items-center gap-2">
+              <h3 class="text-lg font-extrabold text-slate-900">4 Model Struktur Navigasi Multimedia</h3>
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-100 text-indigo-700">Standar ANSI/ISO 5807</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Pilih model di bawah untuk mengamati diagram percabangan ANSI dan klik tombol simulasi interaktif:</p>
           </div>
           <div class="flex flex-wrap gap-2">
-            <button onclick="renderFlowDemo('linear')" class="flow-model-btn active px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200" data-model="linear">
+            <button onclick="renderFlowDemo('linear')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition" data-model="linear">
               1. Linear
             </button>
-            <button onclick="renderFlowDemo('hierarchical')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100" data-model="hierarchical">
-              2. Hierarkis (Bercabang)
+            <button onclick="renderFlowDemo('hierarchical')" class="flow-model-btn active px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 font-bold transition" data-model="hierarchical">
+              2. Hierarkis (Bercabang ANSI)
             </button>
-            <button onclick="renderFlowDemo('nonlinear')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100" data-model="nonlinear">
+            <button onclick="renderFlowDemo('nonlinear')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition" data-model="nonlinear">
               3. Non-Linear
             </button>
-            <button onclick="renderFlowDemo('composite')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100" data-model="composite">
+            <button onclick="renderFlowDemo('composite')" class="flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition" data-model="composite">
               4. Campuran (Composite)
             </button>
           </div>
         </div>
 
-        <!-- Interactive Flow Simulation Area -->
-        <div id="flow-demo-canvas" class="mt-6 p-6 rounded-xl bg-slate-50 border border-dashed border-slate-300 grid-pattern min-h-[260px] flex flex-col justify-center items-center">
-          <!-- Populated by JavaScript -->
+        <!-- Interactive Simulator Controls for Hierarchical Branching -->
+        <div id="branch-simulator-controls" class="p-3 bg-slate-100/80 rounded-xl border border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="font-bold text-slate-700">Simulator Pengambilan Keputusan Pengguna:</span>
+            <span class="text-slate-500 hidden sm:inline" id="sim-branch-guide">Klik salah satu cabang untuk melihat jalur eksekusi di diagram:</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5" id="branch-action-buttons">
+            <!-- Populated dynamically based on model -->
+          </div>
+        </div>
+
+        <!-- Interactive Flow Simulation Area (SVG Scalable Vector Graphic) -->
+        <div id="flow-demo-canvas" class="p-4 sm:p-6 rounded-xl bg-slate-900 border border-slate-800 text-white min-h-[460px] flex flex-col justify-center items-center overflow-x-auto shadow-inner">
+          <!-- Populated by JavaScript SVG renderer -->
         </div>
         
-        <div id="flow-demo-explanation" class="mt-4 p-4 rounded-xl bg-indigo-50/60 border border-indigo-100 text-xs text-slate-700">
+        <!-- Legend & Pedagogical Explanation Box -->
+        <div id="flow-demo-explanation" class="p-4 rounded-xl bg-indigo-50/80 border border-indigo-100 text-xs text-slate-700 space-y-2">
           <!-- Populated by JavaScript -->
         </div>
       </div>
     </div>
 
-    <!-- TAB 2: STORYBOARD E-LEARNING (BUKAN FILM) -->
+    <!-- ========================================== -->
+    <!-- TAB 2: TEORI & STORYBOARD E-LEARNING -->
+    <!-- ========================================== -->
     <div id="tab-teori-storyboard" class="tab-content hidden space-y-8">
       
+      <!-- Academic Definition & Cognitive Theory of Multimedia Learning -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <div class="lg:col-span-1 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 block">Definisi Akademik</span>
+            <h3 class="text-base font-extrabold text-slate-900 mt-0.5">Apa itu Storyboard E-Learning?</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify">
+            Menurut <strong>Horton (2012)</strong> dan <strong>Lee & Owens (2004)</strong>, storyboard <em>e-learning</em> adalah dokumen spesifikasi teknis dan instruksional yang mendefinisikan secara presisi integrasi elemen visual antarmuka (*wireframe* UI), teks pada layar, naskah audio narasi (*Voice Over*), logika interaktivitas kode (*triggers/conditions*), serta umpan balik edukatif (*corrective feedback*) per satuan slide.
+          </p>
+          <div class="p-3.5 bg-emerald-50/80 border border-emerald-200 rounded-xl text-xs text-emerald-950 space-y-1">
+            <div class="font-bold flex items-center gap-1.5 text-emerald-800">
+              <span>Fase Desain Model ADDIE</span>
+            </div>
+            <p class="text-[11px] text-slate-700 leading-relaxed">
+              Dalam model desain instruksional <strong>ADDIE</strong>, Flowchart dan Storyboard berada persis di tahap <strong>Design (D)</strong>. Menulis kode tanpa storyboard berisiko revisi fatal pada tahap <strong>Development (D)</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 block">Prinsip Desain Instruksional</span>
+              <h3 class="text-base font-extrabold text-slate-900">Teori Belajar Multimedia (Richard E. Mayer, 2001)</h3>
+            </div>
+            <span class="px-2.5 py-1 rounded text-[10px] font-mono font-bold bg-slate-100 text-slate-600">CTML Framework</span>
+          </div>
+
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Storyboard e-learning dirancang dengan mematuhi prinsip kognitif multimedia Mayer agar informasi terserap optimal ke dalam memori jangka panjang (*Long-Term Memory*):
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs">
+            <!-- Mayer Principle 1 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">1. Dual-Channel Principle (Saluran Ganda)</span>
+              <p class="text-[11px] text-slate-600 leading-relaxed">
+                Manusia memproses grafis/teks melalui kanal visual, dan suara melalui kanal auditori. Storyboard memisahkan kolom <strong>Visual</strong> dan <strong>Audio (VO)</strong> agar tidak terjadi kelebihan beban (*cognitive overload*) pada salah satu indra saja.
+              </p>
+            </div>
+
+            <!-- Mayer Principle 2 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">2. Spatial & Temporal Contiguity Principle</span>
+              <p class="text-[11px] text-slate-600 leading-relaxed">
+                Teks label pada sketsa visual diletakkan berdekatan langsung dengan gambar yang dijelaskan, dan naskah Voice Over diputar serempak saat animasi terkait berjalan di layar.
+              </p>
+            </div>
+
+            <!-- Mayer Principle 3 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">3. Signaling Principle (Penandaan Penting)</span>
+              <p class="text-[11px] text-slate-600 leading-relaxed">
+                Dalam kolom <em>Programming/Interactions</em>, elemen penting diberi penekanan visual (seperti warna tombol aktif, efek *highlight*, atau panah instruksi) untuk memandu atensi siswa.
+              </p>
+            </div>
+
+            <!-- Mayer Principle 4 -->
+            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="font-bold text-slate-900 block mb-1">4. Feedback & Redundancy Principle</span>
+              <p class="text-[11px] text-slate-600 leading-relaxed">
+                Umpan balik (*Feedback*) bukan sekadar tulisan "Benar/Salah", tetapi memberikan penjelasan sebab-akibat konseptual yang mengoreksi kesalahpahaman kognitif pembelajar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Critical Distinction: Film vs E-learning -->
       <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <div class="p-6 bg-gradient-to-r from-rose-500/10 via-amber-500/5 to-indigo-500/10 border-b border-slate-200">
           <div class="flex items-center gap-3">
-            <span class="p-2 rounded-lg bg-rose-600 text-white font-bold text-xs">PENTING!</span>
-            <h3 class="text-lg font-bold text-slate-900">Mengapa Storyboard E-Learning Berbeda Total dengan Storyboard Film?</h3>
+            <span class="p-1.5 px-2.5 rounded-lg bg-rose-600 text-white font-bold text-xs">KOMPARASI KRUSIAL</span>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">Mengapa Storyboard E-Learning Berbeda Total dengan Storyboard Film?</h3>
           </div>
           <p class="text-xs text-slate-600 mt-1">
-            Banyak mahasiswa salah mengira storyboard multimedia interaktif sama dengan komik atau film kartun. Berikut komparasi teknisnya:
+            Banyak mahasiswa salah kaprah mengira storyboard multimedia interaktif sama dengan storyboard komik strip atau animasi bioskop. Berikut perbedaan teknisnya:
           </p>
         </div>
 
@@ -251,29 +403,29 @@
             </thead>
             <tbody class="divide-y divide-slate-200 font-normal text-slate-700">
               <tr>
-                <td class="py-3 px-4 font-semibold text-slate-900">Sifat Pengalaman</td>
-                <td class="py-3 px-4 text-slate-500">Pasif (Penonton duduk diam menyaksikan alur linear).</td>
-                <td class="py-3 px-4 font-medium text-indigo-900 bg-indigo-50/30">Aktif & Interaktif (User mengklik, mengambil keputusan, bercabang).</td>
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Sifat Pengalaman</td>
+                <td class="py-3.5 px-4 text-slate-500">Pasif & Linear (Penonton duduk diam menyaksikan rentetan adegan yang tak bisa diubah).</td>
+                <td class="py-3.5 px-4 font-medium text-indigo-900 bg-indigo-50/30">Aktif & Bercabang (Pengguna mengklik tombol, menjawab kuis, dan alur bercabang berdasarkan keputusannya).</td>
               </tr>
               <tr>
-                <td class="py-3 px-4 font-semibold text-slate-900">Fokus Visual</td>
-                <td class="py-3 px-4 text-slate-500">Sudut kamera (Close-Up, Long Shot), pencahayaan sinematik.</td>
-                <td class="py-3 px-4 font-medium text-indigo-900 bg-indigo-50/30">Tata letak UI (*Wireframe*), tombol navigasi, zona fokus baca, ilustrasi materi.</td>
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Fokus Visual</td>
+                <td class="py-3.5 px-4 text-slate-500">Sinematografi: Sudut kamera (*Close-Up, Long Shot*), pencahayaan dramatis, akting gestur tokoh.</td>
+                <td class="py-3.5 px-4 font-medium text-indigo-900 bg-indigo-50/30">Wireframe Antarmuka: Tata letak tombol navigasi, zona fokus baca, konsistensi warna UI, ilustrasi materi.</td>
               </tr>
               <tr>
-                <td class="py-3 px-4 font-semibold text-slate-900">Instruksi Teknis</td>
-                <td class="py-3 px-4 text-slate-500">Pergerakan kamera (Pan, Tilt, Zoom) & akting aktor.</td>
-                <td class="py-3 px-4 font-medium text-indigo-900 bg-indigo-50/30"><strong>Programming Triggers</strong>: State tombol, skor variabel, branch jika salah/benar.</td>
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Instruksi Teknis</td>
+                <td class="py-3.5 px-4 text-slate-500">Instruksi juru kamera (*Pan, Tilt, Dolly*) dan durasi *frame/second*.</td>
+                <td class="py-3.5 px-4 font-medium text-indigo-900 bg-indigo-50/30"><strong>Programming Triggers</strong>: Status tombol (*Normal, Hover, Disabled*), penambahan skor variabel, serta aksi *jump*.</td>
               </tr>
               <tr>
-                <td class="py-3 px-4 font-semibold text-slate-900">Respon Terhadap User</td>
-                <td class="py-3 px-4 text-slate-500">Tidak ada (Alur tetap sama siapapun yang menonton).</td>
-                <td class="py-3 px-4 font-medium text-indigo-900 bg-indigo-50/30"><strong>Feedback Pedagogis</strong>: Penjelasan ilmiah jika memilih opsi A, B, atau C.</td>
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Respon Terhadap User</td>
+                <td class="py-3.5 px-4 text-slate-500">Tidak ada (Alur tetap sama persis bagi siapapun yang menonton).</td>
+                <td class="py-3.5 px-4 font-medium text-indigo-900 bg-indigo-50/30"><strong>Feedback Pedagogis</strong>: Validasi jawaban, alasan koreksi jika keliru, dan rute remedial bersyarat.</td>
               </tr>
               <tr>
-                <td class="py-3 px-4 font-semibold text-slate-900">Audio</td>
-                <td class="py-3 px-4 text-slate-500">Dialog adegan & Sound FX sinema.</td>
-                <td class="py-3 px-4 font-medium text-indigo-900 bg-indigo-50/30">Voice Over (VO) naskah pengajaran + SFX interaksi tombol/kuis (Success/Error chime).</td>
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Audio</td>
+                <td class="py-3.5 px-4 text-slate-500">Dialog adegan dramatis dan efek suara sinematik lingkungan (*Foley*).</td>
+                <td class="py-3.5 px-4 font-medium text-indigo-900 bg-indigo-50/30">Voice Over (VO) pengajaran materi terstruktur + SFX responsif tombol (*chime* sukses / *buzz* salah).</td>
               </tr>
             </tbody>
           </table>
@@ -283,9 +435,9 @@
       <!-- Bedah Template Lembar Kerja E-Learning -->
       <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
         <div>
-          <h3 class="text-lg font-bold text-slate-900">Anatomi Lembar Kerja Storyboard E-Learning</h3>
-          <p class="text-xs text-slate-500">
-            Berikut representasi interaktif dari form storyboard standar industri yang Anda gunakan. Klik bagian mana pun untuk membaca fungsi teknisnya:
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">Anatomi Lembar Kerja Storyboard E-Learning (Standard Template)</h3>
+          <p class="text-xs text-slate-500 mt-1">
+            Berikut representasi interaktif dari form storyboard standar industri yang Anda gunakan. Klik pada setiap kotak untuk mempelajari fungsi spesifikasinya:
           </p>
         </div>
 
@@ -294,12 +446,12 @@
           <!-- Top Row: Lesson Title + Slide ID + Programming Header -->
           <div class="grid grid-cols-1 md:grid-cols-12 border-b-2 border-slate-800 bg-slate-50 text-xs">
             <div onclick="showFieldDetail('lesson')" class="cursor-pointer md:col-span-8 p-3 border-b md:border-b-0 md:border-r-2 border-slate-800 hover:bg-indigo-50 transition group">
-              <span class="font-bold text-slate-900 group-hover:text-indigo-600">Lesson Title:</span> 
-              <span class="text-slate-600">Nama modul pembelajaran</span>
+              <span class="font-black uppercase tracking-wider text-slate-900 group-hover:text-indigo-600">Lesson Title:</span> 
+              <span class="text-slate-600 font-medium">Nama topik silabus pembelajaran spesifik</span>
             </div>
             <div onclick="showFieldDetail('slideid')" class="cursor-pointer md:col-span-4 p-3 hover:bg-indigo-50 transition group">
-              <span class="font-bold text-slate-900 group-hover:text-indigo-600">Slide ID:</span> 
-              <span class="font-mono text-slate-600">MOD1_TOPIC2_SLD04</span>
+              <span class="font-black uppercase tracking-wider text-slate-900 group-hover:text-indigo-600">Slide ID:</span> 
+              <span class="font-mono text-indigo-700 font-bold">K3_MOD1_EVAL_Q01</span>
             </div>
           </div>
 
@@ -308,38 +460,38 @@
             <!-- Visual Wireframe Area -->
             <div onclick="showFieldDetail('visual')" class="cursor-pointer md:col-span-8 p-4 border-b md:border-b-0 md:border-r-2 border-slate-800 hover:bg-indigo-50/40 transition flex flex-col justify-between">
               <div>
-                <span class="font-bold text-xs text-slate-900 block mb-1">Visual:</span>
-                <p class="text-xs text-slate-500 italic">Area gambar sketsa tata letak UI, posisi gambar ilustrasi, posisi teks (On-Screen Text), dan letak tombol aksi.</p>
+                <span class="font-black uppercase tracking-wider text-xs text-slate-900 block mb-1">Visual:</span>
+                <p class="text-xs text-slate-500 italic">Sketsa tata letak UI, posisi gambar ilustrasi/video, peletakan On-Screen Text, dan posisi tombol aksi.</p>
               </div>
               <div class="my-4 border border-dashed border-slate-300 rounded-lg p-4 text-center bg-slate-50/70">
-                <span class="text-xs font-mono text-slate-400">[ Sketsa Tombol, Banner, Judul Materi, Card Interaktif ]</span>
+                <span class="text-xs font-mono text-slate-400">[ Area Gambar Wireframe Antarmuka: Tombol, Ilustrasi, Judul, Pilihan ]</span>
               </div>
-              <div class="text-[10px] text-slate-400">Klik blok ini untuk panduan visual UI kognitif.</div>
+              <div class="text-[10px] text-indigo-600 font-semibold">🔍 Klik blok ini untuk melihat panduan kognitif penataan UI.</div>
             </div>
 
             <!-- Right Column: Programming & Reviewer -->
             <div class="md:col-span-4 flex flex-col">
               <div onclick="showFieldDetail('programming')" class="cursor-pointer flex-1 p-3 border-b-2 border-slate-800 hover:bg-indigo-50/50 transition">
-                <span class="font-bold text-xs text-slate-900 block mb-1">Programming / Interactions:</span>
-                <p class="text-[11px] text-slate-600">Logika *trigger*, state tombol (*Normal, Hover, Disabled*), percabangan nilai variabel.</p>
+                <span class="font-black uppercase tracking-wider text-xs text-slate-900 block mb-1">Programming / Interactions:</span>
+                <p class="text-[11px] text-slate-600">Logika pemrograman authoring: status tombol (*Normal, Hover, Disabled*), *triggers*, variabel skor, dan aksi lompat (*jump*).</p>
               </div>
               <div onclick="showFieldDetail('reviewer')" class="cursor-pointer p-3 hover:bg-indigo-50/50 transition bg-slate-50/50">
-                <span class="font-bold text-xs text-slate-900 block mb-1">Reviewer Comments:</span>
-                <p class="text-[11px] text-slate-500">Catatan koreksi dari Dosen / *Subject Matter Expert* (SME) dan instruksional desainer.</p>
+                <span class="font-black uppercase tracking-wider text-xs text-slate-900 block mb-1">Reviewer Comments:</span>
+                <p class="text-[11px] text-slate-500">Catatan koreksi dari Dosen, *Subject Matter Expert* (SME), atau instruksional desainer.</p>
               </div>
             </div>
           </div>
 
           <!-- Audio Row -->
           <div onclick="showFieldDetail('audio')" class="cursor-pointer p-3 border-t-2 border-slate-800 hover:bg-indigo-50/40 transition">
-            <span class="font-bold text-xs text-slate-900">Audio:</span>
-            <span class="text-xs text-slate-600 ml-2">Voice Over (VO) naskah narasi rekaman, efek suara klik (SFX), dan lagu latar (BGM).</span>
+            <span class="font-black uppercase tracking-wider text-xs text-slate-900">Audio:</span>
+            <span class="text-xs text-slate-600 ml-2">Naskah rekaman narasi Voice Over (VO), efek suara tombol (SFX), dan lagu latar (BGM).</span>
           </div>
 
           <!-- Feedback Row -->
           <div onclick="showFieldDetail('feedback')" class="cursor-pointer p-3 border-t-2 border-slate-800 hover:bg-indigo-50/40 transition bg-emerald-50/30">
-            <span class="font-bold text-xs text-emerald-900">Feedback:</span>
-            <span class="text-xs text-slate-600 ml-2">Umpan balik edukatif saat siswa memilih jawaban benar atau salah pada kuis formatif.</span>
+            <span class="font-black uppercase tracking-wider text-xs text-emerald-950">Feedback:</span>
+            <span class="text-xs text-slate-600 ml-2">Umpan balik korektif dan penjelasan konseptual ketika siswa memilih jawaban benar atau salah.</span>
           </div>
         </div>
 
@@ -356,15 +508,17 @@
       </div>
     </div>
 
+    <!-- ========================================== -->
     <!-- TAB 3: STUDIO & SIMULATOR STORYBOARD -->
+    <!-- ========================================== -->
     <div id="tab-studio-storyboard" class="tab-content hidden space-y-8">
       
       <!-- Studio Control Bar -->
       <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h3 class="text-lg font-bold text-slate-900">Studio Lembar Kerja Storyboard E-Learning</h3>
-          <p class="text-xs text-slate-500">
-            Isi atau edit template berikut untuk membuat storyboard slide interaktif. Anda juga dapat langsung menguji simulasinya!
+          <h3 class="text-lg font-extrabold text-slate-900">Studio Lembar Kerja Storyboard E-Learning</h3>
+          <p class="text-xs text-slate-500 mt-1">
+            Isi atau edit template berikut secara interaktif. Anda juga dapat langsung menguji simulasinya di simulator slide!
           </p>
         </div>
         <div class="flex flex-wrap items-center gap-2">
@@ -376,13 +530,13 @@
               <option value="intro-materi">Contoh 3: Slide Materi Interaktif (Tabbed)</option>
             </select>
           </div>
-          <button onclick="simulateSlideNow()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold shadow-md transition flex items-center gap-1.5">
+          <button onclick="simulateSlideNow()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold shadow-md transition flex items-center gap-1.5 cursor-pointer">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
             Uji Simulasi Slide
           </button>
-          <button onclick="exportStoryboardText()" class="px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs font-semibold transition flex items-center gap-1.5">
+          <button onclick="exportStoryboardText()" class="px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 cursor-pointer">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
-            Salin Teks Format
+            Salin Naskah Format
           </button>
         </div>
       </div>
@@ -419,7 +573,7 @@
             
             <!-- Mini Wireframe Visual Preview Box -->
             <div class="p-3 bg-slate-50 border border-dashed border-slate-300 rounded-xl">
-              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Simulasi Sketsa Wireframe:</div>
+              <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Simulasi Sketsa Wireframe Layar:</div>
               <div class="aspect-video max-h-48 bg-white border border-slate-200 rounded-lg p-3 flex gap-3 shadow-inner">
                 <!-- Visual Box Left: Illustration placeholder -->
                 <div class="w-1/2 rounded bg-amber-50 border border-amber-200 flex flex-col items-center justify-center text-center p-2">
@@ -474,7 +628,7 @@ BRANCHING:
         <div class="p-4 border-t-2 border-slate-900 bg-white space-y-2">
           <div class="flex items-center justify-between">
             <label class="text-xs font-black uppercase tracking-wider text-slate-800">Audio (Voice Over, SFX, BGM):</label>
-            <button onclick="playSampleAudio('vo')" class="text-[11px] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1">
+            <button onclick="playSampleAudio('vo')" class="text-[11px] text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1 cursor-pointer">
               🔊 Tes Bunyi Audio SFX
             </button>
           </div>
@@ -492,16 +646,18 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
       </div>
     </div>
 
+    <!-- ========================================== -->
     <!-- TAB 4: KUIS PEMAHAMAN MAHASISWA -->
+    <!-- ========================================== -->
     <div id="tab-kuis-evaluasi" class="tab-content hidden space-y-8">
       <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm max-w-3xl mx-auto">
         <div class="text-center mb-8">
           <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider">
             Evaluasi Formatif Kuliah
           </span>
-          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-2">Uji Pemahaman: Storyboard & Flowchart E-Learning</h3>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-2">Uji Pemahaman: Teori Navigasi Flowchart & Storyboard</h3>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">
-            Uji pemahaman Anda seputar konsep perbedaan storyboard e-learning vs film serta logika navigasinya.
+            Uji pemahaman Anda seputar konsep teori kognitif, aturan simbol ANSI, dan perancangan lembar kerja *e-learning*.
           </p>
         </div>
 
@@ -517,7 +673,7 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
           </div>
           <h4 class="text-lg font-bold text-slate-900">Kuis Selesai!</h4>
           <p class="text-sm text-slate-600" id="quiz-score-text">Skor Anda: 100 / 100</p>
-          <button onclick="resetQuiz()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold">
+          <button onclick="resetQuiz()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold cursor-pointer">
             Ulangi Kuis
           </button>
         </div>
@@ -526,7 +682,7 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
   </main>
 
   <!-- Modal: Live Slide Simulator Player -->
-  <div id="simulator-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div id="simulator-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-xs hidden items-center justify-center p-4">
     <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col">
       <!-- Player Header -->
       <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
@@ -536,7 +692,7 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
           <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
           <span class="text-xs font-mono ml-2 text-slate-300" id="sim-slide-badge">K3_MOD01_EVAL_Q01</span>
         </div>
-        <button onclick="closeSimulator()" class="text-slate-400 hover:text-white text-lg font-bold px-2">
+        <button onclick="closeSimulator()" class="text-slate-400 hover:text-white text-lg font-bold px-2 cursor-pointer">
           ✕
         </button>
       </div>
@@ -545,15 +701,15 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
       <div class="p-6 bg-slate-100 min-h-[340px] flex flex-col justify-between">
         
         <!-- On-screen Question & Art -->
-        <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
           <div class="sm:col-span-5 rounded-lg bg-amber-50 border border-amber-200 p-4 flex flex-col items-center justify-center text-center">
             <span class="text-4xl mb-2">⚡</span>
             <p class="text-xs font-bold text-amber-900" id="sim-art-heading">Insiden Kabel Rusak</p>
-            <p class="text-[11px] text-amber-700 mt-1">Kabel server terkelupas dan membahayakan lingkungan kerja.</p>
+            <p class="text-[11px] text-amber-700 mt-1">Kabel server terkelupas dan mengeluarkan percikan api berbahaya.</p>
           </div>
           <div class="sm:col-span-7 space-y-3">
             <h4 class="text-xs sm:text-sm font-bold text-slate-900" id="sim-question-text">
-              Tindakan apa yang pertama kali harus dilakukan teknisi laboratorium?
+              Tindakan preventif apa yang pertama kali harus dilakukan teknisi laboratorium?
             </h4>
 
             <!-- Interactive Radio Group -->
@@ -600,8 +756,8 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
 
       <!-- Simulator Footer Notes -->
       <div class="p-3 bg-slate-50 border-t border-slate-200 text-[11px] text-slate-500 flex justify-between items-center">
-        <span>Pratinjau bagaimana logika <strong>Programming/Interactions</strong> dieksekusi di runtime e-learning.</span>
-        <button onclick="closeSimulator()" class="px-3 py-1 bg-slate-200 hover:bg-slate-300 rounded text-slate-700 font-semibold">Tutup</button>
+        <span>Pratinjau bagaimana instruksi <strong>Programming/Interactions</strong> dieksekusi di runtime aplikasi.</span>
+        <button onclick="closeSimulator()" class="px-3 py-1 bg-slate-200 hover:bg-slate-300 rounded text-slate-700 font-semibold cursor-pointer">Tutup</button>
       </div>
     </div>
   </div>
@@ -711,79 +867,380 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
 
       document.querySelectorAll('.nav-btn').forEach(btn => {
         if (btn.dataset.tab === tabId) {
-          btn.classList.add('bg-white', 'text-indigo-600', 'shadow-sm');
-          btn.classList.remove('text-slate-700');
+          btn.classList.add('bg-white', 'text-indigo-700', 'shadow-xs', 'font-bold');
+          btn.classList.remove('text-slate-700', 'font-semibold');
         } else {
-          btn.classList.remove('bg-white', 'text-indigo-600', 'shadow-sm');
-          btn.classList.add('text-slate-700');
+          btn.classList.remove('bg-white', 'text-indigo-700', 'shadow-xs', 'font-bold');
+          btn.classList.add('text-slate-700', 'font-semibold');
         }
       });
       playSfx('click');
     }
 
-    // Flowchart Interactive Demonstrator
-    const flowModels = {
-      linear: {
-        title: "Model 1: Linear (Sekuensial)",
-        desc: "Pengguna dipandu maju mundur dalam satu garis lurus (Slide 1 ➔ Slide 2 ➔ Slide 3). Cocok untuk demonstrasi prosedur langkah demi langkah yang ketat atau video interaktif pengantar.",
-        nodes: ["Start (Splash)", "Materi Bab 1", "Materi Bab 2", "Kuis Akhir", "Selesai"]
-      },
+    // Active simulation highlight tracking
+    let activeHighlightedBranch = null;
+
+    // ANSI Flowchart Models Data
+    const ansiFlowchartModels = {
       hierarchical: {
-        title: "Model 2: Hierarkis (Bercabang Berjenjang)",
-        desc: "Berasal dari Menu Utama (Home) yang memecah navigasi ke beberapa sub-topik. Pengguna dapat memilih bab yang diinginkan lalu kembali ke menu utama. Paling standar pada aplikasi e-learning korporat/kampus.",
-        nodes: ["Menu Utama", "Modul K3 Dasar", "Modul Kebakaran", "Modul P3K", "Hasil Evaluasi"]
+        title: "Model 2: Struktur Hierarkis / Bercabang (Standar ANSI / ISO 5807)",
+        desc: "Pada model hierarkis multimedia interaktif, alur berakar dari <strong>Terminator Mulai</strong> ke <strong>Screen Menu Utama</strong>. Titik percabangan direpresentasikan menggunakan simbol <strong>Decision (Belah Ketupat)</strong> 'Pilih Modul?' yang memecah alur menjadi beberapa cabang layar paralel. Setelah siswa menyelesaikan modul, terdapat <strong>alur kembali (Return Loop)</strong> menuju Menu Utama. Modul evaluasi memiliki Decision kedua ('Skor &ge; 75?') yang mengalirkan siswa ke <strong>Terminator Selesai (Lulus)</strong> atau <strong>Remedial</strong>.",
+        controls: [
+          { id: 'b1', label: 'Pilih Cabang 1: Modul K3', target: 'branch-1' },
+          { id: 'b2', label: 'Pilih Cabang 2: Kebakaran', target: 'branch-2' },
+          { id: 'b3', label: 'Pilih Cabang 3: P3K', target: 'branch-3' },
+          { id: 'b4', label: 'Pilih Cabang 4: Evaluasi', target: 'branch-4' },
+          { id: 'reset', label: '↺ Reset Alur', target: 'all' }
+        ],
+        svgRenderer: function(activeBranch) {
+          const isB1 = activeBranch === 'branch-1';
+          const isB2 = activeBranch === 'branch-2';
+          const isB3 = activeBranch === 'branch-3';
+          const isB4 = activeBranch === 'branch-4';
+          const isAll = !activeBranch || activeBranch === 'all';
+
+          return `
+          <svg viewBox="0 0 940 500" class="w-full max-w-4xl h-auto select-none font-sans" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="arrow-default" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#94a3b8"/>
+              </marker>
+              <marker id="arrow-active" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+              </marker>
+              <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#34d399"/>
+              </marker>
+              <marker id="arrow-rose" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#fb7185"/>
+              </marker>
+              <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#1d4ed8"/>
+              </linearGradient>
+              <linearGradient id="grad-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10b981"/>
+                <stop offset="100%" stop-color="#047857"/>
+              </linearGradient>
+            </defs>
+
+            <!-- 1. TERMINATOR: START -->
+            <g id="node-start">
+              <rect x="400" y="15" width="140" height="34" rx="17" fill="url(#grad-blue)" stroke="#60a5fa" stroke-width="2"/>
+              <text x="470" y="37" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">START (Mulai)</text>
+              <text x="555" y="32" fill="#93c5fd" font-size="9" font-family="monospace">[Terminator]</text>
+            </g>
+
+            <!-- Flowline Start -> Menu Utama -->
+            <line x1="470" y1="49" x2="470" y2="76" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-default)"/>
+
+            <!-- 2. SCREEN (PROCESS): Menu Utama -->
+            <g id="node-menu-utama">
+              <rect x="365" y="78" width="210" height="42" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+              <text x="470" y="97" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">Screen: Menu Utama</text>
+              <text x="470" y="112" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="monospace">ID: MOD_HOME_01</text>
+            </g>
+
+            <!-- Flowline Menu Utama -> Decision Pilihan Modul -->
+            <line x1="470" y1="120" x2="470" y2="148" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-default)"/>
+
+            <!-- 3. DECISION (PERCABANGAN ANSI): Pilih Modul? -->
+            <g id="node-decision-pilihan">
+              <polygon points="470,150 560,185 470,220 380,185" fill="#312e81" stroke="#818cf8" stroke-width="2.5"/>
+              <text x="470" y="182" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Pilih Modul?</text>
+              <text x="470" y="196" text-anchor="middle" fill="#c7d2fe" font-size="9">[Decision ANSI]</text>
+            </g>
+
+            <!-- Central Bus Distribution Bar for Branches -->
+            <path d="M 470 220 L 470 240 M 115 240 L 825 240" fill="none" stroke="#94a3b8" stroke-width="2"/>
+
+            <!-- Cabang 1: K3 Dasar -->
+            <g id="branch-k3" class="transition-all duration-300">
+              <line x1="115" y1="240" x2="115" y2="280" stroke="${isB1 ? '#38bdf8' : '#94a3b8'}" stroke-width="${isB1 ? '3' : '2'}" marker-end="url(${isB1 ? '#arrow-active' : '#arrow-default'})"/>
+              <rect x="70" y="247" width="90" height="18" rx="4" fill="#0f172a" stroke="${isB1 ? '#38bdf8' : '#475569'}" stroke-width="1"/>
+              <text x="115" y="260" text-anchor="middle" fill="${isB1 ? '#38bdf8' : '#cbd5e1'}" font-size="9" font-weight="bold">[1] Modul K3</text>
+
+              <rect x="35" y="282" width="160" height="52" rx="4" fill="${isB1 ? '#1e3a8a' : '#1e293b'}" stroke="${isB1 ? '#60a5fa' : '#64748b'}" stroke-width="${isB1 ? '2.5' : '1.5'}"/>
+              <text x="115" y="303" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Modul K3 Dasar</text>
+              <text x="115" y="321" text-anchor="middle" fill="${isB1 ? '#93c5fd' : '#94a3b8'}" font-size="9" font-family="monospace">ID: MOD_K3_SLD01</text>
+
+              <path d="M 115 334 L 115 440" fill="none" stroke="${isB1 ? '#38bdf8' : '#64748b'}" stroke-width="${isB1 ? '2.5' : '1.5'}" stroke-dasharray="${isB1 ? 'none' : '4 3'}"/>
+            </g>
+
+            <!-- Cabang 2: Kebakaran -->
+            <g id="branch-kebakaran" class="transition-all duration-300">
+              <line x1="350" y1="240" x2="350" y2="280" stroke="${isB2 ? '#38bdf8' : '#94a3b8'}" stroke-width="${isB2 ? '3' : '2'}" marker-end="url(${isB2 ? '#arrow-active' : '#arrow-default'})"/>
+              <rect x="300" y="247" width="100" height="18" rx="4" fill="#0f172a" stroke="${isB2 ? '#38bdf8' : '#475569'}" stroke-width="1"/>
+              <text x="350" y="260" text-anchor="middle" fill="${isB2 ? '#38bdf8' : '#cbd5e1'}" font-size="9" font-weight="bold">[2] Kebakaran</text>
+
+              <rect x="270" y="282" width="160" height="52" rx="4" fill="${isB2 ? '#1e3a8a' : '#1e293b'}" stroke="${isB2 ? '#60a5fa' : '#64748b'}" stroke-width="${isB2 ? '2.5' : '1.5'}"/>
+              <text x="350" y="303" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Bahaya Api</text>
+              <text x="350" y="321" text-anchor="middle" fill="${isB2 ? '#93c5fd' : '#94a3b8'}" font-size="9" font-family="monospace">ID: MOD_FIRE_SLD01</text>
+
+              <path d="M 350 334 L 350 440" fill="none" stroke="${isB2 ? '#38bdf8' : '#64748b'}" stroke-width="${isB2 ? '2.5' : '1.5'}" stroke-dasharray="${isB2 ? 'none' : '4 3'}"/>
+            </g>
+
+            <!-- Cabang 3: P3K -->
+            <g id="branch-p3k" class="transition-all duration-300">
+              <line x1="585" y1="240" x2="585" y2="280" stroke="${isB3 ? '#38bdf8' : '#94a3b8'}" stroke-width="${isB3 ? '3' : '2'}" marker-end="url(${isB3 ? '#arrow-active' : '#arrow-default'})"/>
+              <rect x="545" y="247" width="80" height="18" rx="4" fill="#0f172a" stroke="${isB3 ? '#38bdf8' : '#475569'}" stroke-width="1"/>
+              <text x="585" y="260" text-anchor="middle" fill="${isB3 ? '#38bdf8' : '#cbd5e1'}" font-size="9" font-weight="bold">[3] Modul P3K</text>
+
+              <rect x="505" y="282" width="160" height="52" rx="4" fill="${isB3 ? '#1e3a8a' : '#1e293b'}" stroke="${isB3 ? '#60a5fa' : '#64748b'}" stroke-width="${isB3 ? '2.5' : '1.5'}"/>
+              <text x="585" y="303" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Tanggap P3K</text>
+              <text x="585" y="321" text-anchor="middle" fill="${isB3 ? '#93c5fd' : '#94a3b8'}" font-size="9" font-family="monospace">ID: MOD_P3K_SLD01</text>
+
+              <path d="M 585 334 L 585 440" fill="none" stroke="${isB3 ? '#38bdf8' : '#64748b'}" stroke-width="${isB3 ? '2.5' : '1.5'}" stroke-dasharray="${isB3 ? 'none' : '4 3'}"/>
+            </g>
+
+            <!-- Cabang 4: Evaluasi & Decision Skor -->
+            <g id="branch-eval" class="transition-all duration-300">
+              <line x1="825" y1="240" x2="825" y2="280" stroke="${isB4 ? '#38bdf8' : '#94a3b8'}" stroke-width="${isB4 ? '3' : '2'}" marker-end="url(${isB4 ? '#arrow-active' : '#arrow-default'})"/>
+              <rect x="780" y="247" width="90" height="18" rx="4" fill="#0f172a" stroke="${isB4 ? '#38bdf8' : '#475569'}" stroke-width="1"/>
+              <text x="825" y="260" text-anchor="middle" fill="${isB4 ? '#38bdf8' : '#cbd5e1'}" font-size="9" font-weight="bold">[4] Evaluasi</text>
+
+              <rect x="745" y="282" width="160" height="46" rx="4" fill="${isB4 ? '#1e3a8a' : '#1e293b'}" stroke="${isB4 ? '#60a5fa' : '#64748b'}" stroke-width="${isB4 ? '2.5' : '1.5'}"/>
+              <text x="825" y="302" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Kuis Formatif</text>
+              <text x="825" y="318" text-anchor="middle" fill="${isB4 ? '#93c5fd' : '#94a3b8'}" font-size="9" font-family="monospace">ID: MOD_EVAL_Q01</text>
+
+              <line x1="825" y1="328" x2="825" y2="354" stroke="${isB4 ? '#38bdf8' : '#94a3b8'}" stroke-width="2" marker-end="url(${isB4 ? '#arrow-active' : '#arrow-default'})"/>
+
+              <!-- Decision 2: Skor >= 75? -->
+              <polygon points="825,355 890,385 825,415 760,385" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+              <text x="825" y="382" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Skor &ge; 75?</text>
+              <text x="825" y="395" text-anchor="middle" fill="#fde68a" font-size="8">[Decision]</text>
+
+              <!-- Branch YA -->
+              <line x1="890" y1="385" x2="915" y2="385" stroke="#34d399" stroke-width="2"/>
+              <line x1="915" y1="385" x2="915" y2="445" stroke="#34d399" stroke-width="2" marker-end="url(#arrow-green)"/>
+              <text x="902" y="378" fill="#34d399" font-size="9" font-weight="bold">Ya</text>
+
+              <!-- Branch TIDAK -->
+              <line x1="760" y1="385" x2="720" y2="385" stroke="#fb7185" stroke-width="2"/>
+              <line x1="720" y1="385" x2="720" y2="440" stroke="#fb7185" stroke-width="2"/>
+              <text x="732" y="378" fill="#fb7185" font-size="9" font-weight="bold">Tidak</text>
+
+              <!-- Terminator Selesai -->
+              <rect x="850" y="445" width="130" height="34" rx="17" fill="url(#grad-emerald)" stroke="#34d399" stroke-width="2"/>
+              <text x="915" y="466" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">EXIT (Lulus)</text>
+            </g>
+
+            <!-- RETURN LOOP BUS -->
+            <path d="M 20 440 L 720 440 M 20 440 L 20 99 L 362 99" fill="none" stroke="${isAll ? '#64748b' : '#38bdf8'}" stroke-width="${isAll ? '1.5' : '2.5'}" stroke-dasharray="5 4" marker-end="url(${isAll ? '#arrow-default' : '#arrow-active'})"/>
+            
+            <rect x="80" y="448" width="240" height="20" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+            <text x="200" y="462" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="bold">⮌ Return Loop (Tombol Kembali ke Menu Utama)</text>
+          </svg>
+          `;
+        }
       },
+
+      linear: {
+        title: "Model 1: Struktur Navigasi Linear (Sekuensial Murni)",
+        desc: "Struktur di mana pengguna hanya dapat melangkah maju ke slide berikutnya atau mundur ke slide sebelumnya secara bertahap (1 ➔ 2 ➔ 3). Sangat cocok untuk prosedur operasional standar, tutorial langkah-demi-langkah, atau sertifikasi kepatuhan hukum.",
+        controls: [
+          { id: 'next', label: 'Simulasi: Klik Tombol NEXT (Maju)', target: 'step-forward' },
+          { id: 'reset', label: '↺ Reset Alur', target: 'all' }
+        ],
+        svgRenderer: function() {
+          return `
+          <svg viewBox="0 0 900 240" class="w-full max-w-4xl h-auto select-none font-sans" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="lin-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+              </marker>
+              <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="100%" stop-color="#1d4ed8"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="20" y="85" width="110" height="42" rx="21" fill="url(#grad-blue)" stroke="#60a5fa" stroke-width="2"/>
+            <text x="75" y="110" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">START</text>
+            <line x1="130" y1="106" x2="175" y2="106" stroke="#38bdf8" stroke-width="2" marker-end="url(#lin-arrow)"/>
+
+            <rect x="180" y="78" width="130" height="56" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="245" y="103" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen 01</text>
+            <text x="245" y="120" text-anchor="middle" fill="#94a3b8" font-size="9">Orientasi K3</text>
+            <line x1="310" y1="106" x2="355" y2="106" stroke="#38bdf8" stroke-width="2" marker-end="url(#lin-arrow)"/>
+
+            <rect x="360" y="78" width="130" height="56" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="425" y="103" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen 02</text>
+            <text x="425" y="120" text-anchor="middle" fill="#94a3b8" font-size="9">Langkah Prosedur</text>
+            <line x1="490" y1="106" x2="535" y2="106" stroke="#38bdf8" stroke-width="2" marker-end="url(#lin-arrow)"/>
+
+            <rect x="540" y="78" width="130" height="56" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="605" y="103" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen 03</text>
+            <text x="605" y="120" text-anchor="middle" fill="#94a3b8" font-size="9">Kuis Evaluasi</text>
+            <line x1="670" y1="106" x2="715" y2="106" stroke="#38bdf8" stroke-width="2" marker-end="url(#lin-arrow)"/>
+
+            <rect x="720" y="85" width="120" height="42" rx="21" fill="#10b981" stroke="#34d399" stroke-width="2"/>
+            <text x="780" y="110" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">SELESAI</text>
+
+            <path d="M 605 136 L 605 165 L 245 165 L 245 138" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#lin-arrow)"/>
+            <text x="425" y="185" text-anchor="middle" fill="#94a3b8" font-size="9">Tombol [BACK] untuk mengulang materi sebelumnya</text>
+          </svg>`;
+        }
+      },
+
       nonlinear: {
-        title: "Model 3: Non-Linear (Eksploratif)",
-        desc: "Pengguna bebas berpindah ke layar manapun tanpa aturan urutan kaku melalui menu navigasi bebas (Hyperlink / Web-like). Sangat pas untuk ensiklopedia interaktif, galeri anatomi, atau aplikasi referensi cepat.",
-        nodes: ["Lobby Bebas", "Galeri Anatomi", "Pustaka Video", "Kamus Istilah", "Peta Konsep"]
+        title: "Model 3: Struktur Navigasi Non-Linear (Eksplorasi Bebas / Hyperlink Mesh)",
+        desc: "Pengguna memiliki kebebasan penuh menjelajahi seluruh konten tanpa batasan sekuensial yang kaku. Seluruh layar saling terhubung melalui *hyperlink* atau bilah navigasi persisten. Sangat cocok untuk ensiklopedia digital, katalog produk, atau peta konsep interaktif.",
+        controls: [
+          { id: 'all', label: 'Tampilkan Seluruh Hubungan Hyperlink', target: 'all' }
+        ],
+        svgRenderer: function() {
+          return `
+          <svg viewBox="0 0 860 360" class="w-full max-w-4xl h-auto select-none font-sans" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="mesh-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#818cf8"/>
+              </marker>
+            </defs>
+
+            <g stroke="#4f46e5" stroke-width="1.5" stroke-opacity="0.6">
+              <line x1="430" y1="180" x2="200" y2="80" marker-end="url(#mesh-arrow)" marker-start="url(#mesh-arrow)"/>
+              <line x1="430" y1="180" x2="660" y2="80" marker-end="url(#mesh-arrow)" marker-start="url(#mesh-arrow)"/>
+              <line x1="430" y1="180" x2="200" y2="280" marker-end="url(#mesh-arrow)" marker-start="url(#mesh-arrow)"/>
+              <line x1="430" y1="180" x2="660" y2="280" marker-end="url(#mesh-arrow)" marker-start="url(#mesh-arrow)"/>
+              <line x1="200" y1="80" x2="660" y2="80" stroke-dasharray="4 4"/>
+              <line x1="200" y1="280" x2="660" y2="280" stroke-dasharray="4 4"/>
+              <line x1="200" y1="80" x2="200" y2="280" stroke-dasharray="4 4"/>
+              <line x1="660" y1="80" x2="660" y2="280" stroke-dasharray="4 4"/>
+            </g>
+
+            <rect x="340" y="150" width="180" height="60" rx="8" fill="#312e81" stroke="#818cf8" stroke-width="2.5"/>
+            <text x="430" y="177" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">PORTAL EKSPLORASI</text>
+            <text x="430" y="196" text-anchor="middle" fill="#c7d2fe" font-size="9">[Hypermedia Lobby]</text>
+
+            <rect x="120" y="55" width="160" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="200" y="80" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Glosarium K3</text>
+            <text x="200" y="96" text-anchor="middle" fill="#94a3b8" font-size="8">Daftar Istilah Teknis</text>
+
+            <rect x="580" y="55" width="160" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="660" y="80" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Pustaka Video</text>
+            <text x="660" y="96" text-anchor="middle" fill="#94a3b8" font-size="8">Rekaman Simulasi</text>
+
+            <rect x="120" y="255" width="160" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="200" y="280" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Galeri Anatomi 3D</text>
+            <text x="200" y="296" text-anchor="middle" fill="#94a3b8" font-size="8">Model Interaktif</text>
+
+            <rect x="580" y="255" width="160" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+            <text x="660" y="280" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Screen: Studi Kasus</text>
+            <text x="660" y="296" text-anchor="middle" fill="#94a3b8" font-size="8">Analisis Insiden</text>
+          </svg>`;
+        }
       },
+
       composite: {
-        title: "Model 4: Campuran (Composite / Hybrid)",
-        desc: "Kombinasi model hierarkis dan linear. Pengguna memilih modul secara hierarkis di awal, namun saat masuk ke dalam materi, alur berjalan secara linear dan ditutup kuis dengan percabangan remedial.",
-        nodes: ["Menu", "Bab Terpilih", "Langkah 1 (Linear)", "Evaluasi (Cabang)", "Remedial / Lulus"]
+        title: "Model 4: Struktur Campuran (Composite / Hybrid)",
+        desc: "Kombinasi paling populer dalam industri e-learning modern. Menu utama diakses secara hierarkis (bercabang), namun saat pengguna masuk ke dalam bab materi tertentu, alur berubah menjadi linear langkah-demi-langkah dengan pos evaluasi percabangan remedial di akhir.",
+        controls: [
+          { id: 'all', label: 'Tampilkan Siklus Campuran', target: 'all' }
+        ],
+        svgRenderer: function() {
+          return `
+          <svg viewBox="0 0 900 320" class="w-full max-w-4xl h-auto select-none font-sans" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <marker id="comp-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+              </marker>
+            </defs>
+
+            <rect x="30" y="130" width="150" height="60" rx="6" fill="#312e81" stroke="#818cf8" stroke-width="2"/>
+            <text x="105" y="157" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">Menu Utama</text>
+            <text x="105" y="174" text-anchor="middle" fill="#c7d2fe" font-size="9">(Hierarkis)</text>
+
+            <line x1="180" y1="160" x2="230" y2="160" stroke="#38bdf8" stroke-width="2" marker-end="url(#comp-arrow)"/>
+            <polygon points="275,125 320,160 275,195 230,160" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+            <text x="275" y="163" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">Pilih Bab?</text>
+
+            <line x1="320" y1="160" x2="370" y2="160" stroke="#38bdf8" stroke-width="2" marker-end="url(#comp-arrow)"/>
+
+            <rect x="370" y="80" width="410" height="160" rx="8" fill="#0f172a" stroke="#475569" stroke-dasharray="6 4" stroke-width="1.5"/>
+            <text x="575" y="105" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">ALUR LINEAR DI DALAM BAB TERPILIH</text>
+
+            <rect x="390" y="130" width="105" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+            <text x="442" y="153" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Slide 1.1</text>
+            <text x="442" y="168" text-anchor="middle" fill="#94a3b8" font-size="8">Teori Dasar</text>
+
+            <line x1="495" y1="155" x2="525" y2="155" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#comp-arrow)"/>
+
+            <rect x="530" y="130" width="105" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+            <text x="582" y="153" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Slide 1.2</text>
+            <text x="582" y="168" text-anchor="middle" fill="#94a3b8" font-size="8">Video Praktik</text>
+
+            <line x1="635" y1="155" x2="665" y2="155" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#comp-arrow)"/>
+
+            <rect x="670" y="130" width="95" height="50" rx="4" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+            <text x="717" y="153" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Kuis Cek</text>
+            <text x="717" y="168" text-anchor="middle" fill="#94a3b8" font-size="8">Formatif</text>
+
+            <path d="M 717 180 L 717 270 L 105 270 L 105 195" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#comp-arrow)"/>
+            <text x="410" y="288" text-anchor="middle" fill="#94a3b8" font-size="9">Selesai Bab ➔ Kembali ke Menu Utama untuk memilih Bab berikutnya</text>
+          </svg>`;
+        }
       }
     };
 
-    function renderFlowDemo(modelKey) {
+    // Render Flow Demo with Full ANSI standard SVG
+    function renderFlowDemo(modelKey, activeBranch = null) {
+      activeHighlightedBranch = activeBranch;
+
+      // Update button toggle states
       document.querySelectorAll('.flow-model-btn').forEach(btn => {
         if (btn.dataset.model === modelKey) {
-          btn.className = "flow-model-btn active px-3 py-1.5 text-xs font-semibold rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200";
+          btn.className = "flow-model-btn active px-3 py-1.5 text-xs font-bold rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 transition";
         } else {
-          btn.className = "flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100";
+          btn.className = "flow-model-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-50 text-slate-600 border border-slate-200 hover:bg-slate-100 transition";
         }
       });
 
-      const model = flowModels[modelKey];
+      const model = ansiFlowchartModels[modelKey];
+      if (!model) return;
+
+      // Render simulator control buttons
+      const actionBtnsContainer = document.getElementById('branch-action-buttons');
+      actionBtnsContainer.innerHTML = model.controls.map(ctrl => `
+        <button onclick="renderFlowDemo('${modelKey}', '${ctrl.target}')" class="px-2.5 py-1 rounded text-[11px] font-semibold transition cursor-pointer ${
+          activeBranch === ctrl.target
+            ? 'bg-indigo-600 text-white shadow-xs ring-1 ring-indigo-400' 
+            : 'bg-white text-slate-700 border border-slate-300 hover:bg-slate-50'
+        }">
+          ${ctrl.label}
+        </button>
+      `).join('');
+
+      // Render SVG onto Canvas
       const canvas = document.getElementById('flow-demo-canvas');
+      canvas.innerHTML = model.svgRenderer(activeBranch);
+
+      // Render Explanatory details
       const exp = document.getElementById('flow-demo-explanation');
-
-      // Generate visual node chain
-      let html = `<div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-4">`;
-      model.nodes.forEach((node, idx) => {
-        const isFirst = idx === 0;
-        const isLast = idx === model.nodes.length - 1;
-        const nodeClass = isFirst 
-          ? "bg-indigo-600 text-white border-indigo-700 rounded-full" 
-          : isLast 
-          ? "bg-emerald-600 text-white border-emerald-700 rounded-full" 
-          : "bg-white text-slate-800 border-slate-300 rounded-xl";
-
-        html += `
-          <div class="px-3 py-2 text-xs font-bold border shadow-sm flex items-center space-x-1.5 ${nodeClass}">
-            <span>${node}</span>
-          </div>
-        `;
-        if (!isLast) {
-          html += `<span class="text-slate-400 font-bold text-xs sm:text-sm">➔</span>`;
-        }
-      });
-      html += `</div>`;
-      canvas.innerHTML = html;
-
       exp.innerHTML = `
-        <div class="font-bold text-slate-900 mb-1">${model.title}</div>
-        <p class="leading-relaxed">${model.desc}</p>
+        <div class="flex items-center justify-between">
+          <div class="font-bold text-slate-900 text-sm">${model.title}</div>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">ANSI/ISO 5807 Validated</span>
+        </div>
+        <p class="leading-relaxed text-xs text-slate-600 mt-1">${model.desc}</p>
+        <div class="pt-2 border-t border-indigo-100 flex flex-wrap gap-4 text-[11px] text-slate-500">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3.5 h-2 rounded-full border border-indigo-500 bg-indigo-100 inline-block"></span>
+            <span><strong>Stadium:</strong> Terminator (Start/Exit)</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-2.5 border border-slate-500 bg-slate-200 inline-block"></span>
+            <span><strong>Persegi:</strong> Screen/Scene (Proses)</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rotate-45 border border-amber-600 bg-amber-100 inline-block"></span>
+            <span><strong>Belah Ketupat:</strong> Decision (Percabangan/Pilihan)</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-mono text-indigo-600 font-bold">⮌</span>
+            <span><strong>Garis Putus-putus:</strong> Return Loop Bus</span>
+          </div>
+        </div>
       `;
       playSfx('click');
     }
@@ -791,32 +1248,32 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
     // Field Inspector Detailer for Storyboard Anatomy
     const fieldDetails = {
       lesson: {
-        title: "Lesson Title (Nama Modul)",
-        desc: "Menyatakan unit pembelajaran spesifik. Memastikan semua tim (animator, narator, pengembang kode) berada pada konteks bab/silabus yang sama persis."
+        title: "Lesson Title (Nama Modul Pembelajaran)",
+        desc: "Menyatakan unit kurikulum atau silabus spesifik. Memastikan semua tim (Instructional Designer, UI/UX Designer, Voice Over Artist, dan Authoring Programmer) beroperasi pada bab materi yang sama persis."
       },
       slideid: {
-        title: "Slide ID (Pengenal Unik)",
-        desc: "Kunci korelasi antara Flowchart dan Storyboard! Format hierarkis seperti 'K3_MOD01_03' memudahkan programmer melompat ke slide yang dituju pada aksi percabangan (Branching/Jump)."
+        title: "Slide ID (Pengenal Unik & Relasi Flowchart)",
+        desc: "Kunci korelasi antara Flowchart dan Storyboard! Format penamaan hierarkis seperti 'MOD1_TOPIC2_SLD04' memudahkan programmer authoring mengeksekusi aksi 'Jump to Slide' pada percabangan tanpa keliru."
       },
       visual: {
-        title: "Visual (Tata Letak / Wireframe UI)",
-        desc: "Bukan seni melukis indah sinema! Ini adalah wireframe antarmuka pengguna: di mana posisi judul teks, di mana ilustrasi gambar/video, dan di mana peletakan tombol 'Next/Back/Submit'. Mempertimbangkan cognitive load siswa."
+        title: "Visual (Tata Letak / Wireframe UI Kognitif)",
+        desc: "Bukan seni melukis pemandangan! Ini adalah sketsa wireframe tata letak antarmuka pengguna: penempatan teks On-Screen Text (OST), proporsi gambar ilustrasi/video, dan letak tombol aksi dengan meminimalkan beban kognitif."
       },
       programming: {
-        title: "Programming / Interactions",
-        desc: "Jantung multimedia interaktif. Menjelaskan status tombol (Normal, Hover, Disabled), variabel angka penampung skor (Score += 10), trigger klik, dan logika percabangan kondisi (IF - THEN - ELSE)."
+        title: "Programming / Interactions (Logika Interaktivitas)",
+        desc: "Jantung media interaktif. Mendeskripsikan status tombol (Normal, Hover, Disabled, Visited), variabel penampung nilai (UserScore += 10), event trigger klik, serta logika kondisi percabangan (IF - THEN - ELSE)."
       },
       reviewer: {
-        title: "Reviewer Comments (Catatan Ahli / Dosen)",
-        desc: "Ruang koordinasi evaluasi antara Subject Matter Expert (SME), Instructional Designer, dan Client untuk memastikan akurasi keilmuan materi sebelum diproduksi massal."
+        title: "Reviewer Comments (Catatan Evaluasi Ahli / SME)",
+        desc: "Ruang koordinasi evaluasi antara Subject Matter Expert (SME), Dosen, dan Client untuk memvalidasi keakuratan materi akademis sebelum memasuki fase produksi massal (Development)."
       },
       audio: {
-        title: "Audio (Naskah Narasi VO, SFX, & BGM)",
-        desc: "Memuat naskah kata demi kata yang akan dibaca oleh pengisi suara (Voice Over), efek suara interaktif tombol/kuis (SFX), dan ambience background music agar modul hidup."
+        title: "Audio (Naskah Narasi VO, SFX, & Musik Latar)",
+        desc: "Memuat naskah kata demi kata yang dibacakan oleh narator Voice Over (VO), efek suara respon interaksi (SFX), dan ambience background music (BGM) dengan pengaturan volume yang tidak menutupi narasi."
       },
       feedback: {
-        title: "Feedback (Umpan Balik Instruksional)",
-        desc: "Komponen pedagogis paling vital pada e-learning. Bukan sekadar tulisan 'Benar/Salah', melainkan elaborasi penjelasan mengapa pilihan tersebut benar atau salah agar terjadi proses belajar mendalam."
+        title: "Feedback (Umpan Balik Edukatif Formatif)",
+        desc: "Komponen pedagogis paling vital. Bukan sekadar menampilkan 'Benar/Salah', melainkan elaborasi ilmiah yang menjelaskan MENGAPA jawaban tersebut benar atau keliru guna membentuk pemahaman mendalam."
       }
     };
 
@@ -869,7 +1326,7 @@ SALAH: "Kurang tepat. Menempelkan isolasi saat kabel masih dialiri arus bertegan
       document.getElementById('sb-reviewer-desc').value = p.reviewer;
       document.getElementById('sb-audio-desc').value = p.audio;
       document.getElementById('sb-feedback-desc').value = p.feedback;
-      showToast(`Memuat template: ${p.title}`, 'info');
+      showToast(`Memuat preset storyboard: ${p.title}`, 'info');
       playSfx('click');
     }
 
@@ -970,7 +1427,7 @@ ${rev}
         layer.className = "mt-4 p-4 rounded-xl text-xs transition-all bg-emerald-50 border border-emerald-200 text-emerald-950";
         icon.textContent = "✓";
         title.textContent = "Jawaban Tepat! (Score +10)";
-        msg.textContent = "Sesuai petunjuk Storyboard: Mematikan MCB adalah tindakan pertama untuk isolasi energi berbahaya sebelum menyentuh perangkat.";
+        msg.textContent = "Sesuai petunjuk Storyboard: Mematikan sakelar MCB adalah tindakan pertama untuk isolasi energi berbahaya sebelum menyentuh perangkat.";
       } else {
         playSfx('wrong');
         layer.className = "mt-4 p-4 rounded-xl text-xs transition-all bg-rose-50 border border-rose-200 text-rose-950";
@@ -980,40 +1437,62 @@ ${rev}
       }
     }
 
-    // Student Quiz Data & Engine
+    // Student Quiz Data & Engine (Theoretical and Practical)
     const quizQuestions = [
       {
-        question: "Mengapa kolom 'Programming / Interactions' wajib ada di storyboard e-learning tetapi TIDAK ada di storyboard film animasi?",
+        question: "Menurut Cognitive Theory of Multimedia Learning (Richard E. Mayer), mengapa Storyboard memisahkan naskah Voice Over di kolom Audio dan teks On-Screen di kolom Visual?",
         options: [
-          "Karena film animasi tidak membutuhkan naskah suara pengisi karakter.",
-          "Karena e-learning membutuhkan instruksi teknis status tombol (states), variabel skor, dan percabangan interaksi.",
-          "Karena e-learning hanya bisa diputar di aplikasi browser internet.",
-          "Karena storyboard film hanya dibuat menggunakan pensil warna manual."
+          "Agar ukuran file instalasi e-learning menjadi lebih hemat kuota.",
+          "Karena manusia memproses informasi melalui saluran ganda (Dual-Channel): saluran auditori dan saluran visual secara terpisah.",
+          "Agar pengisi suara tidak perlu melihat tampilan grafis modul.",
+          "Karena aplikasi authoring tidak mengizinkan penulisan teks dan audio secara bersamaan."
         ],
         answer: 1,
-        feedback: "Benar! Storyboard e-learning memandu programmer untuk mengatur trigger, interaktivitas, dan kondisi logika aplikasi."
+        feedback: "Tepat! Prinsip Dual-Channel Mayer menjelaskan bahwa memisahkan teks pengajaran via narasi suara (audio) dan ilustrasi visual mencegah beban kognitif berlebih pada satu saluran persepsi."
       },
       {
-        question: "Simbol Flowchart apa yang digunakan saat sistem multimedia harus mengevaluasi apakah jawaban kuis siswa BENAR atau SALAH?",
+        question: "Berdasarkan standar ANSI/ISO 5807, simbol apa yang WAJIB digunakan ketika modul multimedia memberikan opsi pilihan menu atau mengevaluasi hasil kuis?",
         options: [
-          "Terminator (Bentuk Oval lonjong)",
+          "Terminator (Bentuk Stadium / Oval lonjong)",
           "Proses / Screen (Bentuk Persegi panjang)",
           "Decision (Bentuk Belah ketupat)",
-          "Input / Output (Bentuk Jajaran genjang)"
+          "Off-Page Connector (Bentuk Segilima)"
         ],
         answer: 2,
-        feedback: "Tepat! Simbol Decision (Belah Ketupat) menandakan percabangan logika bercabang dua atau lebih berdasarkan kondisi user."
+        feedback: "Benar! Simbol Belah Ketupat (Decision) merepresentasikan titik logika bersyarat di mana sistem menentukan arah percabangan alur berikutnya."
       },
       {
-        question: "Apa fungsi utama penulisan 'Slide ID' (contoh: K3_MOD1_03) yang seragam antara Flowchart dan Storyboard?",
+        question: "Mengapa kolom 'Programming / Interactions' mutlak ada pada storyboard e-learning, tetapi TIDAK pernah ada pada storyboard film animasi?",
         options: [
-          "Agar programmer dan authoring designer tidak salah mengarahkan alur tombol 'Jump/Next' ke layar yang keliru.",
-          "Untuk membatasi durasi belajar siswa agar tidak terlalu lama.",
-          "Sebagai syarat format copyright hak cipta di kementerian.",
-          "Agar ukuran file video animasi menjadi lebih kecil saat dirender."
+          "Karena e-learning bersifat interaktif bercabang, memerlukan instruksi status tombol (states), skor variabel, dan event trigger.",
+          "Karena storyboard film animasi hanya boleh dibuat dengan lukisan tangan di atas kertas.",
+          "Karena e-learning hanya bisa diakses menggunakan jaringan internet kabel.",
+          "Karena pengembang perangkat lunak tidak mengerti bahasa skenario film."
         ],
         answer: 0,
-        feedback: "Tepat sekali! Slide ID adalah kunci relasi agar flowchart dan lembar storyboard sinkron 1:1."
+        feedback: "Tepat sekali! Film bersifat pasif linear (penonton duduk diam), sementara e-learning memerlukan resep logika interaktif bagi authoring developer."
+      },
+      {
+        question: "Dalam prinsip arsitektur informasi 'Spatial Wayfinding', apakah fungsi dari 'Return Loop Bus' pada flowchart navigasi multimedia?",
+        options: [
+          "Menghapus data hasil belajar siswa secara otomatis.",
+          "Mencegah pembelajar terjebak di jalan buntu (dead-end) dengan menyediakan alur kembali yang jelas ke Menu Utama.",
+          "Mempercepat durasi rendering video animasi.",
+          "Menghubungkan komputer siswa langsung ke server basis data."
+        ],
+        answer: 1,
+        feedback: "Tepat! Return loop menjamin pembelajar selalu memiliki jalur keluar dan orientasi navigasi untuk kembali ke beranda."
+      },
+      {
+        question: "Apa korelasi struktural antara kode 'Slide ID' pada Storyboard (misal: K3_MOD1_03) dengan Flowchart Navigasi?",
+        options: [
+          "Slide ID adalah nama unik tiap simpul layar di flowchart yang menjadi target aksi jump/branching tombol navigasi.",
+          "Slide ID digunakan untuk menghitung tarif royalti hak cipta per lembar materi.",
+          "Slide ID menentukan resolusi piksel layar monitor pembelajar.",
+          "Slide ID membatasi waktu belajar siswa maksimal 3 menit per halaman."
+        ],
+        answer: 0,
+        feedback: "Sangat tepat! Slide ID adalah kunci relasi 1-ke-1 antara diagram arsitektur makro (flowchart) dengan spesifikasi teknis mikro (storyboard)."
       }
     ];
 
@@ -1024,7 +1503,7 @@ ${rev}
       container.innerHTML = quizQuestions.map((q, idx) => `
         <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
           <div class="flex items-start gap-2">
-            <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="w-6 h-6 rounded-lg bg-indigo-600 text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
               ${idx + 1}
             </span>
             <h4 class="text-sm font-bold text-slate-900 leading-snug">${q.question}</h4>
@@ -1032,7 +1511,7 @@ ${rev}
           <div class="space-y-2 pl-8">
             ${q.options.map((opt, optIdx) => `
               <label class="flex items-center p-2.5 rounded-lg border border-slate-200 bg-white hover:bg-indigo-50/40 cursor-pointer text-xs transition">
-                <input type="radio" name="q_${idx}" value="${optIdx}" onchange="selectQuizOption(${idx}, ${optIdx})" class="text-indigo-600 mr-3">
+                <input type="radio" name="q_${idx}" value="${optIdx}" onchange="selectQuizOption(${idx}, ${optIdx})" class="text-indigo-600 mr-3 cursor-pointer">
                 <span class="text-slate-700">${opt}</span>
               </label>
             `).join('')}
@@ -1041,7 +1520,7 @@ ${rev}
         </div>
       `).join('') + `
         <div class="flex justify-end pt-4">
-          <button onclick="submitQuizEvaluation()" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-md transition">
+          <button onclick="submitQuizEvaluation()" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-md transition cursor-pointer">
             Kumpulkan Evaluasi
           </button>
         </div>
@@ -1088,7 +1567,7 @@ ${rev}
 
       if (finalScore >= 70) {
         playSfx('correct');
-        showToast(`Selamat! Anda lulus kuis dengan skor ${finalScore}!`, 'success');
+        showToast(`Selamat! Anda lulus evaluasi dengan skor ${finalScore}!`, 'success');
       } else {
         playSfx('wrong');
         showToast(`Skor: ${finalScore}. Silakan pelajari kembali modul materi!`, 'error');
@@ -1104,7 +1583,7 @@ ${rev}
 
     // Initialize application on load
     window.onload = function() {
-      renderFlowDemo('linear');
+      renderFlowDemo('hierarchical');
       renderQuiz();
       showFieldDetail('programming');
     };
